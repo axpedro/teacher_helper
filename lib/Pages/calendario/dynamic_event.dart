@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:table_calendar/table_calendar.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:teacher_helper/shared/page_mask.dart';
 
@@ -73,7 +75,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                   canEventMarkersOverflow: true,
                   todayColor: Colors.red,
                   selectedColor: Theme.of(context).primaryColor,
-                  todayStyle: TextStyle(
+                  todayStyle: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18.0,
                       color: Colors.white)),
@@ -83,7 +85,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                formatButtonTextStyle: TextStyle(color: Colors.white),
+                formatButtonTextStyle: const TextStyle(color: Colors.white),
                 formatButtonShowsNext: false,
               ),
               startingDayOfWeek: StartingDayOfWeek.monday,
@@ -102,7 +104,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                         borderRadius: BorderRadius.circular(10.0)),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     )),
                 todayDayBuilder: (context, date, events) => Container(
                     margin: const EdgeInsets.all(4.0),
@@ -112,7 +114,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                         borderRadius: BorderRadius.circular(10.0)),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     )),
               ),
               calendarController: _controller,
@@ -131,7 +133,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                 ),
                 child: Center(
                     child: Text(event,
-                      style: TextStyle(color: Colors.red,
+                      style: const TextStyle(color: Colors.red,
                           fontWeight: FontWeight.bold,fontSize: 16),)
                 ),
               ),
@@ -143,7 +145,7 @@ class _DynamicEventState extends State<DynamicEvent> {
       
       floatingButton: FloatingActionButton(
         backgroundColor: Colors.red,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: _showAddDialog,
       ),
     );
@@ -154,13 +156,14 @@ class _DynamicEventState extends State<DynamicEvent> {
         context: context,
         builder: (context) => AlertDialog(
           backgroundColor: Colors.white70,
-          title: Text("Adicione evento: "),
+          title: const Text("Adicione evento: "),
           content: TextField(
             controller: _eventController,
           ),
           actions: <Widget>[
+            // ignore: deprecated_member_use
             FlatButton(
-              child: Text("Salvar",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
+              child: const Text("Salvar",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
               onPressed: () {
                 if (_eventController.text.isEmpty) return;
                 setState(() {
