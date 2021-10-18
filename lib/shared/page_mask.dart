@@ -15,7 +15,7 @@ class PageMask extends StatefulWidget {
   final Widget body;
   final Widget? floatingButton;
   const PageMask(
-      {Key? key, required this.body, required this.title, this.floatingButton})
+      {Key? key, required this.body, required this.title, this.floatingButton,})
       : super(key: key);
 
   @override

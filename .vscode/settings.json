@@ -1,0 +1,19 @@
+{
+    "dart.flutterAdditionalArgs": [
+        "--no-sound-null-safety"
+    ],
+    "dart.vmAdditionalArgs": [
+        "--no-sound-null-safety"
+    ],
+    
+    "dart.openDevTools": "flutter",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "git.autofetch": true
+}
