@@ -47,5 +47,5 @@ A nossa proposta principal, é criar um aplicativo onde professores podem fazer 
 
 # Desenvolvedores
 - Daniel Girardi (git:@danielfsc)
-- Pedro Assumpção Xavier
+- Pedro Assumpção Xavier (git:@axpedro)
 - Thomas Repsold Pessoa
