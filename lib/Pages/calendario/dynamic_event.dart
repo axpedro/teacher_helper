@@ -88,6 +88,7 @@ class _DynamicEventState extends State<DynamicEvent> {
               ),
               startingDayOfWeek: StartingDayOfWeek.monday,
               onDaySelected: (date, events,holidays) {
+                
                 setState(() {
                   _selectedEvents = events;
                 });
