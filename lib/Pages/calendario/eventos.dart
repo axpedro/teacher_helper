@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 
@@ -13,7 +13,7 @@ meetings.add(Appointment(startTime: startTime, //evento de duas horas com recorr
 endTime: endTime, 
 subject: 'Aula Programação - Daniel', 
 color: Colors.red,
-recurrenceRule: 'FREQ=DAILY;INTERVAL=7;COUNT=6')); //UMA AULA NESSE DIA DA SEMANA A CADA 7 DIAS POR 6 SEMANAS*/
+recurrenceRule: 'FREQ=DAILY;INTERVAL=7;COUNT=6')); //UMA AULA NESSE DIA DA SEMANA A CADA 7 DIAS POR 6 SEMANAS
 
 
 meetings.add(Appointment(    //evento dentro de um mesmo dia com duração
@@ -47,4 +47,4 @@ appointments = source;
 }
 
 
-}
+}*/

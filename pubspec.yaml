@@ -32,16 +32,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_zoom_drawer: ^2.1.1
   syncfusion_flutter_calendar: ^19.3.44
-
-  #Handle dates
+  table_calendar: ^2.2.1
+  shared_preferences: ^0.5.4+5
   intl: ^0.17.0
 
-  #State management
-  provider: ^5.0.0
   
   
-
-
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +60,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

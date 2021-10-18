@@ -11,13 +11,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageMask(
       title: 'Inicio',
-      body: HomeBody(opcoes: _opcoes),
-      floatingButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          print("TESTE");
-        },
-      ),
-    );
+      body: HomeBody(opcoes: _opcoes));
+      
+        
+      
+    
   }
 }
