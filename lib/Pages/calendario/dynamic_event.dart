@@ -52,36 +52,21 @@ class _DynamicEventState extends State<DynamicEvent> {
     return newMap;
   }
 
- 
- 
- 
-
-
- 
- 
+  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
-        title: Text('Calendario Dinâmico'),
-      ),
-      body: SingleChildScrollView(
+    return PageMask(
+                           
+       title: ('Calendario Dinâmico'),
+            body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            
-
-
-
-
-            
+                        
             TableCalendar(
               
-              availableCalendarFormats:const {CalendarFormat.month : 'Mes', CalendarFormat.twoWeeks: '2 Semanas', CalendarFormat.week: 'semana'},
-              locale: 'pt_BR',
+              availableCalendarFormats:const {CalendarFormat.month : 'Mes', CalendarFormat.twoWeeks: '2 Semanas', CalendarFormat.week: 'semana'}, //Definir para portugues o formato do calendario, por default fica em ingles: month
+              locale: 'pt_BR', //troca a lingua do calendario
               events: _events,
               initialCalendarFormat: CalendarFormat.month,
               calendarStyle: CalendarStyle(
@@ -145,7 +130,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                 ),
                 child: Center(
                     child: Text(event,
-                      style: TextStyle(color: Colors.blue,
+                      style: TextStyle(color: Colors.red,
                           fontWeight: FontWeight.bold,fontSize: 16),)
                 ),
               ),
@@ -153,8 +138,10 @@ class _DynamicEventState extends State<DynamicEvent> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black,
+      
+      
+      floatingButton: FloatingActionButton(
+        backgroundColor: Colors.red,
         child: Icon(Icons.add),
         onPressed: _showAddDialog,
       ),
@@ -166,13 +153,13 @@ class _DynamicEventState extends State<DynamicEvent> {
         context: context,
         builder: (context) => AlertDialog(
           backgroundColor: Colors.white70,
-          title: Text("Adicione um evento"),
+          title: Text("Adicione evento: "),
           content: TextField(
             controller: _eventController,
           ),
           actions: <Widget>[
             FlatButton(
-              child: Text("Save",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
+              child: Text("Salvar",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
               onPressed: () {
                 if (_eventController.text.isEmpty) return;
                 setState(() {
